@@ -31,29 +31,23 @@ def mapL(L, f):
     else:
         return (f(head(L)), mapL(tail(L), f))
 
-def factAll(L):
-    # TODO
-    return None
+def factAll(L):    
+    return mapL( L , fact )
 
 def strAll(L):
-    # TODO
-    return None
+    return mapL( L , str )
 
-def incAll(L):
-    # TODO
-    return None
+def incAll(L):    
+    return mapL( L, lambda x: x+1 ) 
 
 def sqrAll(L):
-    # TODO
-    return None
+    return mapL( L, lambda x: x*x ) 
 
 def isPrimeAll(L):
-    # TODO
-    return None
+    return mapL( L, prime ) 
 
 def incAllN(L, N):
-    # TODO
-    return None
+    return mapL( L, lambda x: x+N ) 
 
 def filterL(L, f):
     if not L:
@@ -64,17 +58,13 @@ def filterL(L, f):
         return (H, T) if f(H) else T
 
 def filterOdd(L):
-    # TODO
-    return None
+    return filterL( L, lambda x: x%2 )
 
 def filterPositive(L):
-    # TODO
-    return None
+    return filterL( L, lambda x: x>0 )
 
 def filterGtN(L, N):
-    # TODO
-    return None
+    return filterL( L, lambda x: x>N )
 
 def filterPrimes(L):
-    # TODO
-    return None
+    return filterL( L, prime )
